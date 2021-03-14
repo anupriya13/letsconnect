@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000'});
+const API = axios.create({ baseURL: 'https://whats-happening-around.herokuapp.com'});
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem('profile')) {
@@ -9,7 +9,7 @@ API.interceptors.request.use((req) => {
   
     return req;
   });
-
+//https://budget-friend-web.herokuapp.com
 //const url = 'https://budget-friend.herokuapp.com/posts';
 
 export const fetchPosts = () => API.get('/posts');

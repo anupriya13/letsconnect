@@ -9,7 +9,7 @@ import { createPost , updatePost} from '../../actions/posts';
 const Form = ({ currentId, setCurrentId }) => {
 
 
-    const [postData, setPostData] = useState({ shop: '', category: '', amount: '', mode: '', selectedFile: '' });
+    const [postData, setPostData] = useState({ shop: '', category: '', caption: '', location: '', mode: '', selectedFile: '' });
     const post = useSelector((state) => currentId ? state.posts.find((p) => p._id == currentId) : null);
     const classes = useStyles();
     const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const Form = ({ currentId, setCurrentId }) => {
   
     const clear = () => {
       setCurrentId(null);
-       setPostData({ shop: '', category: '', amount: '', mode: '', selectedFile: '' });
+       setPostData({ shop: '', category: '', caption: '', location: '', mode: '', selectedFile: '' });
       };
 
       
@@ -42,7 +42,7 @@ const Form = ({ currentId, setCurrentId }) => {
       return (
         <Paper className={classes.paper}>
           <Typography variant="h6" align="center">
-            Please Sign In to create your own purchase and like other's purchases.
+            Please Sign In to create your own post and like other's posts.
           </Typography>
         </Paper>
       );
@@ -51,11 +51,17 @@ const Form = ({ currentId, setCurrentId }) => {
     return (
         <Paper className={classes.paper}>
             <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit = {handleSubmit}>
-            <Typography variant="h6"> {currentId ? 'Editing' : 'Creating'} a Purchase</Typography>
-            <TextField name = "shop" variant = "outlined" label = "Shop"fullWidth value = {postData.shop} onChange = {(e) => setPostData({ ...postData, shop: e.target.value })}/>
+            <Typography variant="h6"> {currentId ? 'Editing' : 'Creating'} a Post</Typography>
+            
+            <TextField name = "shop" variant = "outlined" label = "Heading"fullWidth value = {postData.shop} onChange = {(e) => setPostData({ ...postData, shop: e.target.value })}/>
+            
+            <TextField name = "caption" variant = "outlined" label = "Caption"fullWidth value = {postData.caption} onChange = {(e) => setPostData({ ...postData, caption: e.target.value })}/>
+            
             <TextField name = "category" variant = "outlined" label = "Category"fullWidth value = {postData.category} onChange = {(e) => setPostData({ ...postData, category: e.target.value })}/>
-            <TextField name = "amount" variant = "outlined" label = "Amount"fullWidth value = {postData.amount} onChange = {(e) => setPostData({ ...postData, amount: e.target.value })}/>
-            <TextField name = "mode" variant = "outlined" label = "Payment mode, Hashtags"fullWidth value = {postData.mode} onChange = {(e) => setPostData({ ...postData, mode: e.target.value.split(',') })}/>
+          
+            <TextField name = "location" variant = "outlined" label = "Location"fullWidth value = {postData.location} onChange = {(e) => setPostData({ ...postData, location: e.target.value })}/>
+            
+            <TextField name = "mode" variant = "outlined" label = "Hashtags (use comma to separate)"fullWidth value = {postData.mode} onChange = {(e) => setPostData({ ...postData, mode: e.target.value.split(',') })}/>
 
 
         <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>

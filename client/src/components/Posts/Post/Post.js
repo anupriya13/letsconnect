@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
+import { withStyles } from "@material-ui/core/styles";
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -10,13 +11,18 @@ import { useDispatch } from 'react-redux';
 import { likePost, deletePost } from '../../../actions/posts';
 import useStyles from './styles';
 
+const BlueTextTypography = withStyles({
+  root: {
+    color: "#660000"
+  }
+})(Typography);
 const Post = ({post, setCurrentId}) => {
     const classes = useStyles();
     const dispatch = useDispatch();
     const user = JSON.parse(localStorage.getItem('profile'));
 
     const Likes = () => {
-      if (post.likes.length > 0) {
+      if (undefined !== post.likes && post.likes.length > 0) {
         return post.likes.find((like) => like === (user?.result?.googleId || user?.result?._id))
           ? (
             <><ThumbUpAltIcon fontSize="small" />&nbsp;{post.likes.length > 2 ? `You and ${post.likes.length - 1} others` : `${post.likes.length} like${post.likes.length > 1 ? 's' : ''}` }</>
@@ -48,10 +54,11 @@ const Post = ({post, setCurrentId}) => {
       <div className={classes.details}>
         <Typography variant="body2" color="textSecondary" component="h2">{post.mode.map((mode) => `#${mode} `)}</Typography>
       </div>
-      <Typography variant="h6">&nbsp; {post.shop}</Typography>
-      <Typography className={classes.amount} gutterBottom variant="h5" component="h2"> &nbsp; Total spent = Rs. {post.amount}</Typography>
+      <Typography variant="h6" >&nbsp; {post.shop}</Typography>
+      <BlueTextTypography className={classes.caption} gutterBottom variant="h6" component="h6"> &nbsp; {post.caption}</BlueTextTypography>
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">{post.category}</Typography>
+      <Typography variant="body2" color="textSecondary" component="p"> Location: {post.location}</Typography>
+        <Typography variant="body2" color="textSecondary" component="p"> Category: {post.category}</Typography>
       </CardContent>
 
       <CardActions className={classes.cardActions}>
