@@ -1,2 +1,0 @@
-# letsconnect
-MERN Stack
