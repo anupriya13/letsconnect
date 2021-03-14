@@ -1,1 +1,1 @@
-# budget-friend
+# Lets connect - MERN STACK
