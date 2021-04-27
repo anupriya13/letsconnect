@@ -1,8 +1,20 @@
 # Lets connect - MERN STACK
 Check out the deployed website -> https://lets-connect.netlify.app/
-![q4](https://user-images.githubusercontent.com/54227869/115667439-7847e700-a363-11eb-8699-9c563354fcf6.jpg)
+![image](https://user-images.githubusercontent.com/54227869/116230415-3d83eb80-a775-11eb-8f50-06104fa7c7f5.png)
 ![q5](https://user-images.githubusercontent.com/54227869/115667448-7aaa4100-a363-11eb-91f5-ee5f98b7e8c5.jpg)
-![q6](https://user-images.githubusercontent.com/54227869/115667452-7b42d780-a363-11eb-9a22-8deda18a0f22.jpg)
+![image](https://user-images.githubusercontent.com/54227869/116230533-6310f500-a775-11eb-99e0-ec62348cc6eb.png)
+
 ![q8](https://user-images.githubusercontent.com/54227869/115667459-7d0c9b00-a363-11eb-8558-e3222285ee85.jpg)
+
+![image](https://user-images.githubusercontent.com/54227869/116230679-92276680-a775-11eb-931b-3d659366e99a.png)
+
+![image](https://user-images.githubusercontent.com/54227869/116230743-a5d2cd00-a775-11eb-8cdc-711c4507cbd0.png)
+
+![image](https://user-images.githubusercontent.com/54227869/116231038-019d5600-a776-11eb-84d2-a3a1a3222cf1.png)
+
+![image](https://user-images.githubusercontent.com/54227869/116231161-27c2f600-a776-11eb-93dd-3bd9913cbde2.png)
+
+![Uploading image.png…]()
+
 
 
