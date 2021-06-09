@@ -15,7 +15,6 @@ Check out the deployed website -> https://lets-connect.netlify.app/
 
 ![image](https://user-images.githubusercontent.com/54227869/116231038-019d5600-a776-11eb-84d2-a3a1a3222cf1.png)
 
-![image](https://user-images.githubusercontent.com/54227869/116231161-27c2f600-a776-11eb-93dd-3bd9913cbde2.png)
 
 ![image](https://user-images.githubusercontent.com/54227869/116231382-68bb0a80-a776-11eb-9578-ffcec1876a6e.png)
 
