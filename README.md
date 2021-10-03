@@ -13,7 +13,6 @@ Check out the deployed website -> https://lets-connect.netlify.app/
 
 ![image](https://user-images.githubusercontent.com/54227869/116230743-a5d2cd00-a775-11eb-8cdc-711c4507cbd0.png)
 
-![image](https://user-images.githubusercontent.com/54227869/116231038-019d5600-a776-11eb-84d2-a3a1a3222cf1.png)
 
 
 
